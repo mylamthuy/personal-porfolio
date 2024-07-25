@@ -39,7 +39,7 @@ function About() {
                 <span className='bg-gradient-to-r from-gray-800 to-[#2ea8c8] bg-clip-text text-transparent'> Hazel Lam</span>
               </h1>
               <div>
-                <img src='/daisy.png' alt='daisy' className='w-10 h-10 rotate-image' />
+                <Image src='/daisy.png' alt='daisy' width={40} height={40} className='w-10 h-10 rotate-image' />
               </div>
             </div>
             <div className='mt mt-[50px] bg-[white]/20 relative z-10 p-[20px] backdrop-blur-sm w-3/4 rounded-lg'>
