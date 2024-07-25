@@ -1,8 +1,8 @@
 "use client";
-import React, {useState, useTransition} from 'react';
-import TabButton from './TabButton';
-import EducationData from './EducationData';
-import CertificateData from './CertificateData';
+import React, {useState, useTransition} from "react";
+import TabButton from "./TabButton";
+import EducationData from "./EducationData";
+import CertificateData from "./CertificateData";
 
 const TAB_DATA = [
     {
@@ -19,7 +19,7 @@ const TAB_DATA = [
 
 function Qualification()
 {
-    const [tab, setTab] = useState('education');
+    const [tab, setTab] = useState("education");
     const [isPending, startTransition] = useTransition();
 
     const handleTabChange = (id) => {
@@ -29,8 +29,8 @@ function Qualification()
     }
 
   return (
-    <div className='mb-10'>
-        <div className='flex flex-row justify-start mt-8 space-x-8'>
+    <div className="mb-10">
+        <div className="flex flex-row justify-start mt-8 space-x-8">
           <TabButton
             selectTab={() => handleTabChange("education")}
             active={tab === "education"}

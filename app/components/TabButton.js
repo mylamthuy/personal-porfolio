@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const TabButton = ({active, selectTab, children}) => {
-    const buttonClasses = active ? 'border-b-2 border-[#2EA8C8]' : 'text-gray-400'
+    const buttonClasses = active ? "border-b-2 border-[#2EA8C8]" : "text-gray-400"
 
   return (
     <button onClick={selectTab}>

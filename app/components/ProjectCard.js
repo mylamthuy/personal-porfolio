@@ -1,7 +1,7 @@
 import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import Image from 'next/image';
+import Image from "next/image";
 
 const ProjectCard = ({ imgUrl, title, description, techStacks = [], gitUrl, liveUrl }) => {
   return (
@@ -39,11 +39,11 @@ const ProjectCard = ({ imgUrl, title, description, techStacks = [], gitUrl, live
             ))}
         </div> */}
 
-        {techStacks.map((item, index) => (
+        {/* {techStacks.map((item, index) => (
                 <div key={index} className="w-6 h-6 rounded-full relative border-1 border-black">
                     <Image src={`/images/${item}`} alt="tech-icon" width={24} height={24} className="w-6 h-6 absolute transform rounded-full"/>
                 </div>
-            ))}
+            ))} */}
         
       </div>
     </div>
