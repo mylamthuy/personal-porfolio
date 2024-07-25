@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "title": "ParkEase",
+        "description": "A cross-platform application that helps ease the search for parking lots.",
+        "techStack": [
+            "csharp.png",
+            "netMaui.png"
+        ],
+        "image": "/images/parkEase.png",
+        "gitUrl": "https://github.com/mylamthuy/parking-lot-availability.git",
+        "liveUrl": ""
+    },
+    {
+        "id": 2,
+        "title": "Recipe Sharing",
+        "description": "A web application that allows users to share and explore new recipes every day.",
+        "techStack": [
+            "javaScript.png",
+            "react.jpeg",
+            "css.png",
+            "firebase.png"
+        ],
+        "image": "/images/recipe.png",
+        "gitUrl": "https://github.com/mylamthuy/recipe-sharing.git",
+        "liveUrl": "https://recipe-sharing-three.vercel.app/"
+    }
+]
