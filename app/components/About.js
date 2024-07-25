@@ -35,7 +35,7 @@ function About() {
           {/* Left section */}
           <div className="col-span-7 place-self-center">
             <div className="flex flex-wrap space-x-2">
-              <h1 className="md-4 text-6xl font-extrabold">Hello, I'm 
+              <h1 className="md-4 text-6xl font-extrabold">Hello, I&apos;m 
                 <span className="bg-gradient-to-r from-gray-800 to-[#2ea8c8] bg-clip-text text-transparent"> Hazel Lam</span>
               </h1>
               <div>
