@@ -10,10 +10,11 @@ function Contact() {
     const nameRef = useRef("");
     const emailRef = useRef("");
     const messageRef = useRef("");
-    const [emailSend, setEmailSent] = useState(false);
+
+    const [statusMessage, setStatusMessage] = useState("");
     
 
-    useEffect(() => emailjs.init(process.env.PUBLIC_KEY), []);
+    useEffect(() => emailjs.init(process.env.NEXT_PUBLIC_PUBLIC_KEY), []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -25,25 +26,29 @@ function Contact() {
         };
       
         
-        emailjs.send(process.env.SERVICE_ID, process.env.TEMPLATE_ID, templateParams)
+        emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, templateParams)
         .then((response) => {
             console.log("SUCCESS!", response.status, response.text);
             if(response.status === 200) {
-                setEmailSent(true);
+                setStatusMessage("Email sent successfully!");
             }
-          },
-          (error) => {
+        })
+          
+          .catch((error) => {
             console.log("FAILED...", error);
-          },
-            
-        );
+            setStatusMessage("Failed to send email!");
+          });
+
+        // Clear form fields
+        nameRef.current.value = "";
+        emailRef.current.value = "";
+        messageRef.current.value = "";
     }
 
   return (
     <div id="contact" className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
         {/* Left section */}
         <div className="flex items-center flex-col">
-            {/* <div className="bg-[#83DEF6] w-10 h-10 rounded-full blur z-0"></div> */}
             <h4 className="text-xl font-bold my-2 mb-8 z-10">Get in touch</h4>
             <div className="flex flex-row gap-4 z-10">
                 <Link href="https://github.com/mylamthuy">
@@ -57,11 +62,6 @@ function Contact() {
         
         {/* Right section */}
         <div>
-        {emailSend ? (
-          <p className="text-[#069957] text-md font-medium mt-4">
-            Email sent successfully!
-          </p>
-        ) : (
             <form className="flex flex-col"
                 onSubmit={handleSubmit}>
                 <div className="mb-6">
@@ -80,7 +80,17 @@ function Contact() {
                     Send Message
                 </button>
             </form>
-        )}
+
+            {/* {emailSend ? (
+                <p className="text-[#069957] text-md font-medium mt-4">
+                    Email sent successfully!
+                </p>
+                ) : (
+                    <p className="text-[#c33537] text-md font-medium mt-4">
+                    Error in sending email!
+                </p>
+            )} */}
+            {statusMessage && <p className="text-md font-medium mt-4">{statusMessage}</p>}
         </div>
     </div>
   )

@@ -5,7 +5,8 @@
         "description": "A cross-platform application that provides real-time updates for parking operations, tailored for both public and private areas.",
         "techStack": [
             "csharp.png",
-            "netMaui.png"
+            "netMaui.png",
+            "mongodb.png"
         ],
         "image": "/images/parkEase.png",
         "gitUrl": "https://github.com/mylamthuy/ParkEase.git",
