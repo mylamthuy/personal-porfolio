@@ -2,23 +2,23 @@
     {
         "id": 1,
         "title": "ParkEase",
-        "description": "A cross-platform application that helps ease the search for parking lots.",
+        "description": "A cross-platform application that provides real-time updates for parking operations, tailored for both public and private areas.",
         "techStack": [
             "csharp.png",
             "netMaui.png"
         ],
         "image": "/images/parkEase.png",
-        "gitUrl": "https://github.com/mylamthuy/parking-lot-availability.git",
+        "gitUrl": "https://github.com/mylamthuy/ParkEase.git",
         "liveUrl": ""
     },
     {
         "id": 2,
         "title": "Recipe Sharing",
-        "description": "A web application that allows users to share and explore new recipes every day.",
+        "description": "A web application where users share their favorite recipes and discover new culinary ideas daily.",
         "techStack": [
             "javaScript.png",
             "react.jpeg",
-            "css.png",
+            "tailwind.png",
             "firebase.png"
         ],
         "image": "/images/recipe.png",

@@ -27,26 +27,23 @@ const ProjectCard = ({ imgUrl, title, description, techStacks = [], gitUrl, live
       <div className="rounded-b-xl bg-[#FAF9F6] px-4 py-4">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
         <p className="text-gray-700">{description}</p>
-        {/* <div className="flex flex-wrap pt-3">
-            <div className="w-6 h-6 rounded-full relative border-1 border-black">
-            <Image src="/images/JavaScript.png" alt="tech-icon" width={24} height={24} className="w-6 h-6 absolute transform rounded-full"/>
+
+        <div className="flex space-x-2 mt-4">
+          {techStacks.map((item, index) => (
+            <div key={index} className="w-10 h-10 rounded-full relative border-1 border-black">
+              <Image 
+                src={`/images/${item}`} 
+                alt={`${item}-icon`} 
+                width={22} 
+                height={22} 
+                className="w-10 h-10 absolute transform rounded-full"
+              />
             </div>
-
-            {techStacks.map((item, index) => (
-                <div key={index} className="w-6 h-6 rounded-full relative border-1 border-black">
-                    <Image src={`/public/images/${item}.png`} alt="tech-icon" width={24} height={24} className="w-6 h-6 absolute transform rounded-full"/>
-                </div>
-            ))}
-        </div> */}
-
-        {/* {techStacks.map((item, index) => (
-                <div key={index} className="w-6 h-6 rounded-full relative border-1 border-black">
-                    <Image src={`/images/${item}`} alt="tech-icon" width={24} height={24} className="w-6 h-6 absolute transform rounded-full"/>
-                </div>
-            ))} */}
-        
-      </div>
+          ))}
+        </div>
+      </div>  
     </div>
+    
   );
 };
 

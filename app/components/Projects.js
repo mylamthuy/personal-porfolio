@@ -19,7 +19,7 @@ function Projects() {
             key={project.id}
             title={project.title}
             description={project.description}
-            techStacks={project.techStacks}
+            techStacks={project.techStack}
             imgUrl={project.image}
             gitUrl={project.gitUrl}
             liveUrl={project.liveUrl}

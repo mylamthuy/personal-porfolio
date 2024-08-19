@@ -13,7 +13,7 @@ function Contact() {
     const [emailSend, setEmailSent] = useState(false);
     
 
-    useEffect(() => emailjs.init("tNb524u0oklG0jBg0"), []);
+    useEffect(() => emailjs.init(process.env.PUBLIC_KEY), []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -25,7 +25,7 @@ function Contact() {
         };
       
         
-        emailjs.send("service_p61nxoh", "template_bfjl3cm", templateParams)
+        emailjs.send(process.env.SERVICE_ID, process.env.TEMPLATE_ID, templateParams)
         .then((response) => {
             console.log("SUCCESS!", response.status, response.text);
             if(response.status === 200) {
